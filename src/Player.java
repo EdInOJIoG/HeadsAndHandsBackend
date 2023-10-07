@@ -9,6 +9,10 @@ public class Player extends Entity {
         maxHealth = healthPoints;
     }
 
+    // метод лечения для игрока
+    // игрок не может вылечиться больше 4 раз
+    // и не может вылечиться больше максимального здоровья,
+    // которое было задано изначально в конструкторе
     public void heal() {
         if(numberOfHeals < 4) {
             setHealthPoints((float) (getHealthPoints() * 1.3));

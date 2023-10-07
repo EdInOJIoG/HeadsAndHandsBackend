@@ -47,6 +47,7 @@ public class Entity {
             }
         }
 
+        // рассчитываем количество нанесенного урона
         if(attackSuccess) {
             int damage = random.nextInt(maxDamage - minDamage + 1) + minDamage;
             target.healthPoints -= damage;
@@ -60,6 +61,7 @@ public class Entity {
             System.out.println("Атака неудачна :(");
     }
 
+    // метод получения текущего здоровья существа
     public String getStats() {
         String nameOfEntity;
 

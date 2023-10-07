@@ -20,9 +20,12 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        // создание существа монстр со следующими параметрами: атака 2, защита 7, здоровье 7, диапазон урона 1-4
         Monsters monster = new Monsters(2, 7, 7, 1, 4);
+        // создание существа игрок со следующими параметрами: атака 4, защита 5, здоровье 9, диапазон урона 2-5
         Player player = new Player(4, 5, 9, 2, 5);
 
+        // меню с консольным выбором действия
         while(player.isAlive() && monster.isAlive()) {
             System.out.println("Выберите действие:");
             System.out.println("1. Исцелиться");
